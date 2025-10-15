@@ -1,0 +1,164 @@
+{
+  "scanner": {
+    "timeout": 30,
+    "max_retries": 3,
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+    "follow_redirects": true,
+    "max_redirects": 5,
+    "verify_ssl": false,
+    "threads": 10,
+    "delay": 0.1
+  },
+  "vulnerability_scans": {
+    "sql_injection": {
+      "enabled": true,
+      "payloads": [
+        "' OR '1'='1",
+        "' OR 1=1--",
+        "'; DROP TABLE users; --",
+        "' UNION SELECT NULL, username, password FROM users--"
+      ],
+      "timeout": 10
+    },
+    "xss": {
+      "enabled": true,
+      "payloads": [
+        "<script>alert('XSS')</script>",
+        "<img src=x onerror=alert('XSS')>",
+        "<svg onload=alert('XSS')>"
+      ],
+      "timeout": 10
+    },
+    "directory_traversal": {
+      "enabled": true,
+      "payloads": [
+        "../../../etc/passwd",
+        "..\\..\\..\\windows\\system32\\drivers\\etc\\hosts"
+      ],
+      "timeout": 10
+    },
+    "command_injection": {
+      "enabled": true,
+      "payloads": [
+        "; ls -la",
+        "| whoami",
+        "&& cat /etc/passwd"
+      ],
+      "timeout": 10
+    },
+    "ldap_injection": {
+      "enabled": true,
+      "payloads": [
+        "*",
+        "*)(uid=*",
+        "*)(|(uid=*"
+      ],
+      "timeout": 10
+    },
+    "xxe": {
+      "enabled": true,
+      "timeout": 10
+    },
+    "ssrf": {
+      "enabled": true,
+      "payloads": [
+        "http://127.0.0.1:22",
+        "http://localhost:80",
+        "http://169.254.169.254/latest/meta-data/"
+      ],
+      "timeout": 10
+    }
+  },
+  "fuzzing": {
+    "enabled": true,
+    "max_payloads_per_type": 10,
+    "endpoint_discovery": true,
+    "parameter_discovery": true,
+    "header_fuzzing": true,
+    "method_fuzzing": true,
+    "timeout": 15
+  },
+  "reconnaissance": {
+    "enabled": true,
+    "dns_enumeration": true,
+    "subdomain_enumeration": true,
+    "port_scanning": true,
+    "technology_detection": true,
+    "whois_lookup": true,
+    "ssl_analysis": true,
+    "timeout": 20
+  },
+  "network_scanning": {
+    "enabled": true,
+    "port_range": "1-1000",
+    "common_ports_only": true,
+    "service_detection": true,
+    "os_fingerprinting": true,
+    "vulnerability_scanning": true,
+    "timeout": 5,
+    "max_threads": 100
+  },
+  "reporting": {
+    "output_dir": "reports",
+    "formats": [
+      "json",
+      "html",
+      "csv",
+      "xml"
+    ],
+    "include_summary": true,
+    "include_recommendations": true,
+    "severity_colors": {
+      "critical": "#dc3545",
+      "high": "#fd7e14",
+      "medium": "#ffc107",
+      "low": "#28a745"
+    }
+  },
+  "logging": {
+    "level": "INFO",
+    "file": "bughunter.log",
+    "max_size": "10MB",
+    "backup_count": 5,
+    "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  },
+  "advanced": {
+    "custom_payloads": [],
+    "custom_headers": {},
+    "proxy": {
+      "enabled": false,
+      "host": "",
+      "port": 8080,
+      "username": "",
+      "password": ""
+    },
+    "rate_limiting": {
+      "enabled": false,
+      "requests_per_second": 10
+    },
+    "exclusions": {
+      "domains": [],
+      "ips": [],
+      "urls": [],
+      "parameters": []
+    }
+  },
+  "stealth": {
+    "enabled": true,
+    "rate_limit_delay": 0.5,
+    "max_requests_per_minute": 60,
+    "user_agent_rotation": true,
+    "random_delays": true,
+    "retry_attempts": 3,
+    "request_timeout": 30,
+    "connection_pool_size": 100,
+    "proxies": [],
+    "stealth_mode": true,
+    "anti_detection": {
+      "randomize_headers": true,
+      "mimic_browser_behavior": true,
+      "respect_robots_txt": true,
+      "randomize_request_order": true
+    }
+  }
+}
