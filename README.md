@@ -1,6 +1,6 @@
-# 🕵️ BugHunterer - Advanced Web Vulnerability Scanner
+#  BugHunterer - Advanced Web Vulnerability Scanner
 
-BugHunterer is a comprehensive, wildly complex Python-based web vulnerability scanner and penetration testing framework designed for security professionals, bug bounty hunters, and penetration testers.
+BugHunterer is a comprehensive, Python-based web vulnerability scanner and penetration testing framework that I am starting to work on for potential bug hunting automation.
 
 **Author**: Infosec_Viking  
 **Repository**: https://github.com/MaxFiveTen/BugHunterer
@@ -9,7 +9,7 @@ BugHunterer is a comprehensive, wildly complex Python-based web vulnerability sc
 
 ### Core Vulnerability Scanning (100+ Vulnerability Types)
 
-BugHunterer tests for **100+ web vulnerability types** including:
+BugHunterer tests for 100+ web vulnerability types including:
 
 #### Core OWASP Top 10 & Critical Vulnerabilities
 - **SQL Injection** - Union, Boolean, Time-based, Error-based, Blind, Out-of-band
@@ -97,8 +97,8 @@ BugHunterer tests for **100+ web vulnerability types** including:
 
 1. **Clone the repository:**
 ```bash
-git clone https://github.com/yourusername/bughunt.git
-cd bughunt
+git clone https://github.com/MaxFiveTen/BugHunter.git
+cd bughunter
 ```
 
 2. **Install dependencies:**
@@ -176,7 +176,7 @@ BugHunter uses a JSON-based configuration system. A default `config.json` file i
 }
 ```
 
-## 🎯 Usage Examples
+## Usage Examples
 
 ### 1. Basic Web Application Scan
 ```bash
@@ -198,7 +198,7 @@ python main.py --target https://example.com --config custom_config.json
 python main.py --target https://example.com --quiet --output ./automated_reports
 ```
 
-## 📊 Report Formats
+## Report Formats
 
 ### HTML Report
 - Professional web-based interface
@@ -224,7 +224,7 @@ python main.py --target https://example.com --quiet --output ./automated_reports
 - Standardized vulnerability format
 - Custom parsing support
 
-## 🛡️ Security Features
+## Security Features
 
 ### Ethical Usage
 - **Authorized Testing Only** - Use only on systems you own or have explicit permission to test
@@ -238,7 +238,7 @@ python main.py --target https://example.com --quiet --output ./automated_reports
 - **Response Analysis** - Advanced pattern matching
 - **Timing-Based Detection** - Blind injection testing
 
-## 🔍 Vulnerability Types
+## Vulnerability Types
 
 ### Injection Vulnerabilities
 - SQL Injection (Union-based, Boolean-based, Time-based, Error-based)
@@ -264,7 +264,7 @@ python main.py --target https://example.com --quiet --output ./automated_reports
 - Information Leakage
 - Service Version Disclosure
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 BugHunter/
@@ -286,7 +286,7 @@ BugHunter/
 └── requirements.txt      # Python dependencies
 ```
 
-## 🧪 Testing
+## Testing
 
 Run the test suite:
 
@@ -301,10 +301,9 @@ python -m pytest tests/ --cov=src/
 python -m pytest tests/test_scanner.py
 ```
 
-## 🤝 Contributing
+## Contributing
 
-We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
-
+I welcome contributions! 
 ### Development Setup
 
 1. Fork the repository
@@ -323,26 +322,24 @@ flake8 src/
 ```
 6. Submit a pull request
 
-## 📝 License
+## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License
 
-## ⚠️ Disclaimer
+##  Disclaimer
 
 **IMPORTANT**: BugHunter is designed for authorized security testing only. Users are responsible for ensuring they have proper authorization before testing any systems. The authors and contributors are not responsible for any misuse or damage caused by this tool.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - OWASP community for vulnerability research
 - Security researchers and bug bounty hunters
 - Open source security tools and libraries
 - Python security community
 
-## 📞 Support
+## Support
 
-- **Issues**: [GitHub Issues](https://github.com/yourusername/bughunt/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/yourusername/bughunt/discussions)
-- **Documentation**: [Wiki](https://github.com/yourusername/bughunt/wiki)
+
 
 ## 🔄 Version History
 
@@ -353,6 +350,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-**Happy Hunting! 🕵️‍♂️**
+**Happy Hunting! **
 
-*Remember: With great power comes great responsibility. Use BugHunter ethically and responsibly.*
+*Remember: Don't be dumb, RTFM*
+
