@@ -1,6 +1,6 @@
 #  BugHunter - Advanced Web Vulnerability Scanner
 
-BugHunterer is a comprehensive, Python-based web vulnerability scanner and penetration testing framework that I am starting to work on for potential bug hunting automation.
+BugHunter is a comprehensive, Python-based web vulnerability scanner and penetration testing framework that I am starting to work on for potential bug hunting automation.
 
 **Author**: Infosec_Viking  
 **Repository**: https://github.com/MaxFiveTen/BugHunter
@@ -353,6 +353,7 @@ This project is licensed under the MIT License
 **Happy Hunting! **
 
 *Remember: Don't be dumb, RTFM*
+
 
 
 
