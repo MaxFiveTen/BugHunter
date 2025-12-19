@@ -9,7 +9,7 @@ BugHunter is a comprehensive, Python-based web vulnerability scanner and penetra
 
 ### Core Vulnerability Scanning (100+ Vulnerability Types)
 
-BugHunterer tests for 100+ web vulnerability types including:
+BugHunter tests for 100+ web vulnerability types including:
 
 #### Core OWASP Top 10 & Critical Vulnerabilities
 - **SQL Injection** - Union, Boolean, Time-based, Error-based, Blind, Out-of-band
@@ -353,6 +353,7 @@ This project is licensed under the MIT License
 **Happy Hunting! **
 
 *Remember: Don't be dumb, RTFM*
+
 
 
 
